@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -497,7 +497,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Faster-R-CNN"><a href="#Faster-R-CNN" class="headerlink" title="Faster R-CNN"></a>Faster R-CNN</h1><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>Faster R-CNN的主结构如下图所示：</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/08/20/faster-R-CNN/faster R-CNN.jpg" alt="avatar"></p>
+<p><img src="/2020/08/20/faster-R-CNN/faster R-CNN.jpg" alt="avatar"></p>
 <p>Faster R-CNN的大体过程：</p>
 <ol>
 <li>使用backbone来进行特征提取，生成一个feature map</li>
@@ -599,12 +599,12 @@ L(\{p_i\},\{t_i\}) = \frac{1}{N_{cls}}\sum_{i}L_{cls}(p_i,p_i^*)+\lambda\frac{1}
 <li><p>对于网格的每一份进行max pooling处理</p>
 </li>
 </ol>
-<p><img src="/ywj1/ywj1.github.io.git/2020/08/20/faster-R-CNN/RoI-Pooling.jpg" alt="avatar"></p>
+<p><img src="/2020/08/20/faster-R-CNN/RoI-Pooling.jpg" alt="avatar"></p>
 <p>feature map尺寸是$8\times 8$,RoI的尺寸是$5\times 7$,$pooled_w = 2,pooled_h=2$,因此将RoI划分成$2\times 2$的size，其中第一个宽$\lfloor 5÷2 \rfloor = 2$，以此类推可以得出如上图。</p>
 <h3 id="Classificatin"><a href="#Classificatin" class="headerlink" title="Classificatin"></a>Classificatin</h3><p>输入：proposal feature maps</p>
 <p>输出：其中一个是通过全连接和softmax输出类别的概率，另外一个进行bounding box regression获得更高精度的检测框。</p>
 <h3 id="训练"><a href="#训练" class="headerlink" title="训练"></a>训练</h3><p>（图中第二行应为Fast R-CNN）</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/08/20/faster-R-CNN/train.jpg" alt="avatar"></p>
+<p><img src="/2020/08/20/faster-R-CNN/train.jpg" alt="avatar"></p>
 <ol>
 <li>首先将已经训练好的model的权重参数对RPN进行初始化，并训练，获取region proposals</li>
 <li>训练Fast R-CNN网络，使用RPN提供的proposal（由imageNet训练好的Fast R-CNN模型的权重来提供）</li>
@@ -1157,7 +1157,7 @@ L(\{p_i\},\{t_i\}) = \frac{1}{N_{cls}}\sum_{i}L_{cls}(p_i,p_i^*)+\lambda\frac{1}
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -514,7 +514,7 @@
 <p>特征融合前：由于在特征融合之前，对于backbone生成的不同feature map要使用$1\times 1$卷积，将会降低多尺度特征表达(??)，因为没有考虑semantic gap。(？？)使用存在语义差异的特征进行融合，可能会导致次优解。</p>
 <p>特征融合中：对于top-down pathway的feature map和backbone的feature map进行element-wise相加，可能会损失空间解析率和空间细节，因为可能有多个物体存在一个照片中。</p>
 <p>特征融合后：每个目标的proposal都是基于从一个特征层次上汇聚的特征网格进行细化的，这些特征网格是根据proposals的尺度启发式地选择的。但是，来自其他级别的被忽略的特性可能对对象分类或回归有益。考虑到这个问题，PANet集合了所有金字塔层的RoIs特征，并将它们以max操作方式融合，然后将它们与独立的全连接层融合。然而，max融合会忽略响应较小的特性，而这些特性可能也很有帮助，并且仍然不能充分利用其他级别的特性。同时，额外的全连通层显著增加了模型参数（不太懂，只是翻译）</p>
-<h4 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h4><p><img src="/ywj1/ywj1.github.io.git/2020/09/27/AugFPN/architecture.jpg" alt="avatar"></p>
+<h4 id="Methodology"><a href="#Methodology" class="headerlink" title="Methodology"></a>Methodology</h4><p><img src="/2020/09/27/AugFPN/architecture.jpg" alt="avatar"></p>
 <h5 id="Consistent-Supervision"><a href="#Consistent-Supervision" class="headerlink" title="Consistent Supervision"></a>Consistent Supervision</h5><p>对融合后的特征图M2~M5进行监督，具体方法使对RPN网络得到的每一个候选区域分别映射到M2~M5上的到相应的feature map，对feature map进行分类和回归，这样得到一个损失函数，将这个损失函数和网络本身的损失进行一个加权求和。</p>
 <h5 id="Residual-Feature-Augmentation"><a href="#Residual-Feature-Augmentation" class="headerlink" title="Residual Feature Augmentation"></a>Residual Feature Augmentation</h5><p>在融合之前使用$1\times 1$的卷积进行特征降维，会造成信息损失，因为C5的信息使没有损失的，因此将C5的特征融合到M5中，减少了信息损失。</p>
 <h5 id="Soft-RoI-Selection"><a href="#Soft-RoI-Selection" class="headerlink" title="Soft RoI Selection"></a>Soft RoI Selection</h5>
@@ -1071,7 +1071,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

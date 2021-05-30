@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    124
+                    126
                 </div>
                 
 
@@ -480,10 +480,10 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="牛客——华为机试题"><a href="#牛客——华为机试题" class="headerlink" title="牛客——华为机试题"></a>牛客——华为机试题</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个int型整数，按照从右向左的阅读顺序，返回一个不含重复数字的新的整数。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h3 id="解法与思路"><a href="#解法与思路" class="headerlink" title="解法与思路"></a>解法与思路</h3><p><strong>思路</strong></p>
 <p>首先将int类型的数据逐个放入list中，然后倒转，并去重，然后在重新输出</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num = eval(input())</span><br><span class="line"></span><br><span class="line">a = list(map(str,str(num)))</span><br><span class="line">a.reverse()</span><br><span class="line">b = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(a)):</span><br><span class="line">    <span class="keyword">if</span> a[i] <span class="keyword">not</span> <span class="keyword">in</span> b:</span><br><span class="line">        b.append(a[i])</span><br><span class="line"></span><br><span class="line">num =int( <span class="string">''</span>.join(b))</span><br><span class="line">print(num)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line"></span><br><span class="line">a = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">str</span>,<span class="built_in">str</span>(num)))</span><br><span class="line">a.reverse()</span><br><span class="line">b = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(a)):</span><br><span class="line">    <span class="keyword">if</span> a[i] <span class="keyword">not</span> <span class="keyword">in</span> b:</span><br><span class="line">        b.append(a[i])</span><br><span class="line"></span><br><span class="line">num =<span class="built_in">int</span>( <span class="string">&#x27;&#x27;</span>.join(b))</span><br><span class="line"><span class="built_in">print</span>(num)</span><br></pre></td></tr></table></figure>
 <p>‘’.join(b):将list的数据输出成str</p>
 
                 
@@ -1007,7 +1007,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

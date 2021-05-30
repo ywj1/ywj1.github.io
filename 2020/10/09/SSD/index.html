@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -498,7 +498,7 @@
 <p>SSD提取了不同尺度的特征图来进行预测。</p>
 <h3 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><p>从名字可以读出SSD是一个多框预测算法，并且在准确度和速度上都比YOLO算法要好，SSD相对于YOLO算法有俩个很重要的改变：1. 提取了不同尺度的特征图来进行检测，使用大尺度来检测小物体，小尺度来进行检测大物体。2. 使用Default boxes(anchor boxes)来进行多框预测，并且不同于YOLO算法使用Fully connected，SSD使用$3\times 3$filter来进行结果预测。</p>
 <h4 id="SSD模型"><a href="#SSD模型" class="headerlink" title="SSD模型"></a>SSD模型</h4><p>使用VGG模型(改造过)进行特征提取，在VGG提取之后，继续使用卷积核来继续进行特征图提取，并且对于不同的feature map使用$3\times 3$ filter来进行边界框预测和分类，最后使用NMS算法，删除多余的候选框，最后得到预测的边界框。(如下图)</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/09/SSD/model.jpg" alt="avatar"></p>
+<p><img src="/2020/10/09/SSD/model.jpg" alt="avatar"></p>
 <h5 id="SSD模型的改进之处"><a href="#SSD模型的改进之处" class="headerlink" title="SSD模型的改进之处"></a>SSD模型的改进之处</h5><p><strong>用于目标检测的多尺度特征图</strong></p>
 <p>在改造过后的VGGNet使用卷积层继续提取feature map，使用后续的feature map来进行object detection。从而达到了多尺度的效果。(因为使用同一张图的不同feature map可以提高语义分割的质量，这类似于使用不同尺度的相同种类图片)</p>
 <p><strong>使用卷积核来进行目标预测</strong></p>
@@ -1058,7 +1058,7 @@ s_k = s_{min} + \frac{s_{max} - s_{min}}{m-1}(k-1), k\in[1,m]</script><p>论文�
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

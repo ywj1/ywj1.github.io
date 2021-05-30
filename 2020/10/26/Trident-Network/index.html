@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -498,7 +498,7 @@
 <p>针对之前Feature Fusion中的一些问题，例如特征不连续等，提出了Trident Network，其实这个的关键在于Trident block，对于一个feature map使用三条支路（不同的带孔卷积）。</p>
 <h3 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><h4 id="Trident-Networks"><a href="#Trident-Networks" class="headerlink" title="Trident Networks"></a>Trident Networks</h4><p>作者首先说明三个对于目标检测影响的重要因素：1.downsample rate 2. network depth 3. receptive field。对于第三个作者做了实验来说明该影响，对于大的scale物体，使用dilation大的带孔卷积效果会更好。</p>
 <h5 id="Trident-block"><a href="#Trident-block" class="headerlink" title="Trident block"></a>Trident block</h5><p>于是作者在上述实验的基础之上，提出了Trident block，对于同一个模块，使用不同dilation的带孔卷积，从而达到不同scale的训练，并且针对FPN的feature inconsistency，作者的Trident block使用了uniform representational power。</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/26/Trident-Network/network.jpg" alt="avatar"></p>
+<p><img src="/2020/10/26/Trident-Network/network.jpg" alt="avatar"></p>
 <p>并且作者提出了三个策略</p>
 <ol>
 <li>weigh sharing among branches，通过带孔卷积间的权重共享，可以减少参数个数，并且使用一个uniform transformation with the same representational power。</li>
@@ -1049,7 +1049,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -480,9 +480,9 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="牛客——华为机试题"><a href="#牛客——华为机试题" class="headerlink" title="牛客——华为机试题"></a>牛客——华为机试题</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>数据表记录包含表索引和数值（int范围的整数），请对表索引相同的记录进行合并，即将相同索引的数值进行求和运算，输出按照key值升序进行输出。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h3 id="解法与思路"><a href="#解法与思路" class="headerlink" title="解法与思路"></a>解法与思路</h3><p>首先读取每行数据，用空格分开，然后判断这个key是否存在字典中，若存在则相加，否则直接放入。然后取出key进行排序，之后对key逐一输出。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num = eval(input())</span><br><span class="line">dict = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(num):</span><br><span class="line">	m, n = map(int,input().split())</span><br><span class="line">	<span class="keyword">if</span> dict.has_keys(m):</span><br><span class="line">		dict[m] += n</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		dict[m] = n</span><br><span class="line">keys = sorted(dict.keys())</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> keys:</span><br><span class="line">	print(key,dict[key])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">num = <span class="built_in">eval</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">dict</span> = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(num):</span><br><span class="line">	m, n = <span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">dict</span>.has_keys(m):</span><br><span class="line">		<span class="built_in">dict</span>[m] += n</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="built_in">dict</span>[m] = n</span><br><span class="line">keys = <span class="built_in">sorted</span>(<span class="built_in">dict</span>.keys())</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> keys:</span><br><span class="line">	<span class="built_in">print</span>(key,<span class="built_in">dict</span>[key])</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -1005,7 +1005,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

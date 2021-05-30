@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -503,13 +503,13 @@
 <li>learn the generalizable representations of object：学习概述的特征，可以用于艺术的识别</li>
 </ol>
 <p><strong>YOLO模型的框架</strong></p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/09/22/YOLOv1/YOLOv1.png" alt="The architecture"></p>
+<p><img src="/2020/09/22/YOLOv1/YOLOv1.png" alt="The architecture"></p>
 <p>输入resize: $448\times 448\times 3$</p>
 <p>输出: $7\times 7\times 30$</p>
 <p>其中输出为$7\times 7$表示的是将图像分为$7\times 7$的网格，最后30分为20和10，10为俩个bounding box(坐标和confidence: 表示是否是物体)，20为一个20个类别。</p>
 <p>bounding box: 四个坐标(x,y,w,h), confidence表示该边界框是否包含目标，$confidence = Pr(object)*IOU_{pred}^{truth}$</p>
 <p>激活函数使用Leaky relu函数来进行</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/09/22/YOLOv1/loss_function.png" alt="loss function"></p>
+<p><img src="/2020/09/22/YOLOv1/loss_function.png" alt="loss function"></p>
 <p>其中$\lambda_{coord} = 5, \lambda_{noobj} = 0.5$</p>
 <p><strong>YOLO的缺点</strong></p>
 <p>对于小物体效果不好，并且一个网格中只能预测了俩个框，并且只属于一类。</p>
@@ -1051,7 +1051,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

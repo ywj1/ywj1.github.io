@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -495,7 +495,7 @@
                 <h2 id="MobileNets-Efficient-Convolutional-Neural-Networks-for-Mobile-Vision-Applications-MobileNets：用于移动视觉应用的高效卷积神经网络"><a href="#MobileNets-Efficient-Convolutional-Neural-Networks-for-Mobile-Vision-Applications-MobileNets：用于移动视觉应用的高效卷积神经网络" class="headerlink" title="MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications(MobileNets：用于移动视觉应用的高效卷积神经网络)"></a>MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications(MobileNets：用于移动视觉应用的高效卷积神经网络)</h2><h3 id="初步阅读-10-20"><a href="#初步阅读-10-20" class="headerlink" title="初步阅读(10%-20%)"></a>初步阅读(10%-20%)</h3><h4 id="作者写作的目的"><a href="#作者写作的目的" class="headerlink" title="作者写作的目的"></a>作者写作的目的</h4><p>为了能够将深度学习模型应用于移动应用中（例如手机等），因此需要降低模型的复杂度，从而降低对于运算时间和内存的消耗。</p>
 <h4 id="作者的创新点"><a href="#作者的创新点" class="headerlink" title="作者的创新点"></a>作者的创新点</h4><p>使用Depthwise Separable Convolution(深度可分离卷积)和pointwise convolution(逐点卷积)来对传统的卷积操作进行切分，这样子就降低了模型的参数，从而就降低了运算时间和内存消耗。</p>
 <h3 id="MobileNets"><a href="#MobileNets" class="headerlink" title="MobileNets"></a>MobileNets</h3><h4 id="Network-Structure"><a href="#Network-Structure" class="headerlink" title="Network Structure"></a>Network Structure</h4><p>网络的主要的单元是由Depthwise Separable Convolution和Pointwise Convolution来代替普通卷积来构成的。</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/15/MobileNetv1/network.jpg" alt="avatar"></p>
+<p><img src="/2020/10/15/MobileNetv1/network.jpg" alt="avatar"></p>
 <p>在每个深度可分离卷积和逐点卷积之后加上BN和ReLU层来进行操作。接下来分别说一说这俩个卷积。</p>
 <h5 id="Depthwise-Separable-Convolution"><a href="#Depthwise-Separable-Convolution" class="headerlink" title="Depthwise Separable Convolution"></a>Depthwise Separable Convolution</h5><p>对于传统的卷积模型，要将$D_K\times D_k\times M$经过卷积成$D_K\times D_K\times N$,要使用(kernel_size = m)的卷积核$m\times m\times M\times N$</p>
 <p>因此对于FLOPs，为$D_K\times D_K\times m\times m\times M\times N$，从理论上来说传统的卷积，是对于一个channel来说有$m\times m\times N$的size的卷积核来与feature map进行卷积操作。</p>
@@ -503,7 +503,7 @@
 <h5 id="Pointwise-Convolution"><a href="#Pointwise-Convolution" class="headerlink" title="Pointwise Convolution"></a>Pointwise Convolution</h5><p>对于深度可分离卷积操作过后的output我们是没办法改变它的channel的，因此需要逐点卷积来进行channel的改变，因此需要$1\times 1\times M \times N$size的卷积核。</p>
 <p>因此对于上述操作之后，FLOPs为$D_K\times D_K \times m\times m\times M+D_K\times D_K\times M\times N$，因此相对于传统的卷积，FLOPs降低了$m^2$</p>
 <h5 id="Body-Architecture"><a href="#Body-Architecture" class="headerlink" title="Body Architecture"></a>Body Architecture</h5><p>下图是它的模型的整体参数</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/15/MobileNetv1/Body Architecture.jpg" alt="avatar"></p>
+<p><img src="/2020/10/15/MobileNetv1/Body Architecture.jpg" alt="avatar"></p>
 <p>对于模型我们引入俩个参数$\alpha$(宽度因子)和$\rho$(分辨率因子)来分别控制输入通道，输出通道的大小和输入图片的size。</p>
 
                 
@@ -1047,7 +1047,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

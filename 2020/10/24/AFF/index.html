@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -502,12 +502,12 @@
 <p><strong>作者新颖之处</strong></p>
 <p>作者基于SENet和SKNet提出了AFF模型，通过结合局部特征和全局特征的attention机制来进行feature fusion。</p>
 <h3 id="进一步阅读"><a href="#进一步阅读" class="headerlink" title="进一步阅读"></a>进一步阅读</h3><h4 id="Attention-Feature-Fusion"><a href="#Attention-Feature-Fusion" class="headerlink" title="Attention Feature Fusion"></a>Attention Feature Fusion</h4><h5 id="MS-CAM-model"><a href="#MS-CAM-model" class="headerlink" title="MS_CAM model"></a>MS_CAM model</h5><p>下图是MS_CAM模型：</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/24/AFF/MS_CAM.png" alt="avatar"></p>
+<p><img src="/2020/10/24/AFF/MS_CAM.png" alt="avatar"></p>
 <p>MS_CAM采用了bottleneck structure，左边是global feature，右边是local feature，其中左边的global feature与SENet不同之处在于，将SENet的Fully connected layer变为了Point-wise Conv layer，这样的目的是减小了计算量。其中+表示的element-wise summation，✖表示的element-wise multiplication。</p>
-<h5 id="AFF-model"><a href="#AFF-model" class="headerlink" title="AFF model"></a>AFF model</h5><p><img src="/ywj1/ywj1.github.io.git/2020/10/24/AFF/AFF.png" alt="avatar"></p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/24/AFF/function-aff.png" alt="avatar"></p>
+<h5 id="AFF-model"><a href="#AFF-model" class="headerlink" title="AFF model"></a>AFF model</h5><p><img src="/2020/10/24/AFF/AFF.png" alt="avatar"></p>
+<p><img src="/2020/10/24/AFF/function-aff.png" alt="avatar"></p>
 <p>其中Z表示的fused feature，我觉得该feature fusion想法类似于Cross Entropy。（理解起来还挺简单，但是想到是真的难！）对于其中的initial integration仅仅使用了简单的element-wise summation。因此作者在此基础之上又提出了iAFF，其实iAFF就是俩层AFF，对于X,Y在使用一次MS_CAM模型。如图：</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/24/AFF/iAFF.png" alt="avatar"></p>
+<p><img src="/2020/10/24/AFF/iAFF.png" alt="avatar"></p>
 
                 
             </div>
@@ -1050,7 +1050,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

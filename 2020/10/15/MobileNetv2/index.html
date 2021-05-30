@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -496,8 +496,8 @@
 <h4 id="作者创新的方法"><a href="#作者创新的方法" class="headerlink" title="作者创新的方法"></a>作者创新的方法</h4><p>使用一个Inverted Residuals和Linear Bottlenecks来对原有的MobileNetv1进行改进。</p>
 <h3 id="MobileNetV2"><a href="#MobileNetV2" class="headerlink" title="MobileNetV2"></a>MobileNetV2</h3><h4 id="Network-Structure"><a href="#Network-Structure" class="headerlink" title="Network Structure"></a>Network Structure</h4><p>MobileNetV2使用Inverted Residuals模块来进行构造网络结构。</p>
 <h5 id="Inverted-Residuals"><a href="#Inverted-Residuals" class="headerlink" title="Inverted Residuals"></a>Inverted Residuals</h5><p>其实这个就是类似于Residuals network中的残差块，都是先用$1\times 1$卷积，使用$3\times 3$，再使用$1\times 1$进行操作，最后使用残差连接，其中不同的点在于残差网络中，先对原有的feature map进行降维，之后进行升维，Inverted Residuals对于feature map进行升维之后进行降维。</p>
-<p><img src="/ywj1/ywj1.github.io.git/2020/10/15/MobileNetv2/difference-residual.jpg" alt="avatar"></p>
-<h5 id="Body-Architecture"><a href="#Body-Architecture" class="headerlink" title="Body Architecture"></a>Body Architecture</h5><p><img src="/ywj1/ywj1.github.io.git/2020/10/15/MobileNetv2/network.png" alt="avatar"></p>
+<p><img src="/2020/10/15/MobileNetv2/difference-residual.jpg" alt="avatar"></p>
+<h5 id="Body-Architecture"><a href="#Body-Architecture" class="headerlink" title="Body Architecture"></a>Body Architecture</h5><p><img src="/2020/10/15/MobileNetv2/network.png" alt="avatar"></p>
 <p>本文提出了针对非线性激活函数提出了俩个猜想</p>
 <ol>
 <li>If the mainifold of interest remains non-zeros volume after ReLU transformation, it corresponds to a linear transformation.</li>
@@ -1046,7 +1046,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -457,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    155
+                    157
                 </div>
                 
 
@@ -482,35 +482,35 @@
                 <p><strong>Python</strong></p>
 <ol>
 <li><p>将一个int类型的数据逐个放入list中</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list(map(str,str(num)))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">str</span>,<span class="built_in">str</span>(num)))</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>将list逐个输出转化成字符串</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">''</span>.join(list)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;</span>.join(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>转化二进制，八进制，十六进制</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin(dec)/oct(dec)/hex(dec)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bin</span>(dec)/<span class="built_in">oct</span>(dec)/<span class="built_in">hex</span>(dec)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>多行输入输出—牛客网</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> sys.stdin:</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在list中去除空字符或者none</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string = list(filter(<span class="literal">None</span>, string))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string = <span class="built_in">list</span>(<span class="built_in">filter</span>(<span class="literal">None</span>, string))</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ol>
 <li><p>切片</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">list[:<span class="number">-1</span>]//读取到最后一位数</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span>[:-<span class="number">1</span>]//读取到最后一位数</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <ol>
 <li><p>转化成ACSII码</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ord(c)<span class="comment">#转化成ASCII码</span></span><br><span class="line">chr(c)<span class="comment">#转化成字符</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ord</span>(c)<span class="comment">#转化成ASCII码</span></span><br><span class="line"><span class="built_in">chr</span>(c)<span class="comment">#转化成字符</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>find函数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.find(str,beg,end)<span class="comment">#找到返回下标，如果没有找到返回-1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.find(<span class="built_in">str</span>,beg,end)<span class="comment">#找到返回下标，如果没有找到返回-1</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>大小写转化</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str.lower()<span class="comment">#转化成小写</span></span><br><span class="line">str.upper()<span class="comment">#转化成大写</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">str</span>.lower()<span class="comment">#转化成小写</span></span><br><span class="line"><span class="built_in">str</span>.upper()<span class="comment">#转化成大写</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 </li>
 <li></li>
 </ol>
@@ -1044,7 +1044,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             

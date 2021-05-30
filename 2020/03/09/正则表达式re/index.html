@@ -29,8 +29,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="陈奔的博客" type="application/atom+xml">
+</head>
 
 
 
@@ -461,7 +461,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    393
+                    421
                 </div>
                 
 
@@ -493,10 +493,10 @@
 <p>re.search(pattern,string,flag=0)</p>
 <p>pattern：正则中的模式字符串，string：被查找替换的原始字符串</p>
 <p>flags：标志位，用于控制正则表达式的匹配方式。可以检测string的任何位置</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re.search(<span class="string">'[0-9]'</span>,<span class="string">'sdfs9300'</span>)</span><br><span class="line"><span class="comment">#就会找到其中的字符</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re.search(<span class="string">&#x27;[0-9]&#x27;</span>,<span class="string">&#x27;sdfs9300&#x27;</span>)</span><br><span class="line"><span class="comment">#就会找到其中的字符</span></span><br></pre></td></tr></table></figure>
 <p>re.match(pattern,string,flag=0)</p>
 <p>只能从字符串的开头找起</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re.match(<span class="string">'com'</span>,<span class="string">'complier sfsf sf'</span>)</span><br><span class="line"><span class="comment">#就会返回None</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re.match(<span class="string">&#x27;com&#x27;</span>,<span class="string">&#x27;complier sfsf sf&#x27;</span>)</span><br><span class="line"><span class="comment">#就会返回None</span></span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="机试题目"><a href="#机试题目" class="headerlink" title="机试题目"></a>机试题目</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>密码要求:</p>
 <p>1.长度超过8位</p>
@@ -505,7 +505,7 @@
 <p>说明:长度超过2的子串</p>
 <hr>
 <p><strong>代码</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        line = sys.stdin.readline().strip()</span><br><span class="line">        <span class="keyword">if</span> line == <span class="string">''</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> len(line)&lt;=<span class="number">8</span>:</span><br><span class="line">            print(<span class="string">'NG'</span>)</span><br><span class="line">            contine</span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">'[0-9]'</span>,line):</span><br><span class="line">            count += <span class="number">1</span><span class="comment">#如果有数字就加1</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">'[a-z]'</span>,line):</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">'[A-Z]'</span>,line):</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">'[^0-9a-zA-Z]'</span>,line):</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> count &lt; <span class="number">3</span>:</span><br><span class="line">            print(<span class="string">"NG"</span>)</span><br><span class="line">            contine</span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">r'.*(...).*\1'</span>,line):</span><br><span class="line">            print(<span class="string">"NG"</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        print(<span class="string">"OK"</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        line = sys.stdin.readline().strip()</span><br><span class="line">        <span class="keyword">if</span> line == <span class="string">&#x27;&#x27;</span>:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(line)&lt;=<span class="number">8</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;NG&#x27;</span>)</span><br><span class="line">            contine</span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">&#x27;[0-9]&#x27;</span>,line):</span><br><span class="line">            count += <span class="number">1</span><span class="comment">#如果有数字就加1</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">&#x27;[a-z]&#x27;</span>,line):</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">&#x27;[A-Z]&#x27;</span>,line):</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">&#x27;[^0-9a-zA-Z]&#x27;</span>,line):</span><br><span class="line">            count += <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> count &lt; <span class="number">3</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;NG&quot;</span>)</span><br><span class="line">            contine</span><br><span class="line">        <span class="keyword">if</span> re.search(<span class="string">r&#x27;.*(...).*\1&#x27;</span>,line):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;NG&quot;</span>)</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;OK&quot;</span>)</span><br></pre></td></tr></table></figure>
 <p>r’.*(…).*\1’表示前面有任意数，(…)表示三个任意数,\1表示重复上面引用分组。</p>
 
                 
@@ -1033,7 +1033,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.8k</span>
+                        class="white-color">27k</span>
             
             
             
