@@ -410,20 +410,6 @@
   </url>
   
   <url>
-    <loc>https://ywj1.github.io/tags/C/</loc>
-    <lastmod>2021-05-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ywj1.github.io/tags/anchor-free/</loc>
-    <lastmod>2021-05-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ywj1.github.io/tags/object-detection/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
@@ -432,6 +418,20 @@
   
   <url>
     <loc>https://ywj1.github.io/tags/one-stage/</loc>
+    <lastmod>2021-05-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ywj1.github.io/tags/C/</loc>
+    <lastmod>2021-05-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ywj1.github.io/tags/anchor-free/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -564,14 +564,14 @@
   </url>
   
   <url>
-    <loc>https://ywj1.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://ywj1.github.io/tags/%E5%8D%8E%E4%B8%BA%E7%AC%94%E8%AF%95/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ywj1.github.io/tags/%E5%8D%8E%E4%B8%BA%E7%AC%94%E8%AF%95/</loc>
+    <loc>https://ywj1.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -606,6 +606,13 @@
   </url>
   
   <url>
+    <loc>https://ywj1.github.io/tags/%E7%AC%94%E8%AF%95/</loc>
+    <lastmod>2021-05-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ywj1.github.io/tags/dataset/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
@@ -621,13 +628,6 @@
   
   <url>
     <loc>https://ywj1.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2021-05-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ywj1.github.io/tags/%E7%AC%94%E8%AF%95/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
