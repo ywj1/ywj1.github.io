@@ -6,7 +6,7 @@
   <link href="https://ywj1.github.io/atom.xml" rel="self"/>
   
   <link href="https://ywj1.github.io/"/>
-  <updated>2020-10-26T08:14:36.000Z</updated>
+  <updated>2021-06-01T12:39:33.540Z</updated>
   <id>https://ywj1.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Transformer In Object Detection</title>
+    <link href="https://ywj1.github.io/2021/05/27/Transformer-In-Object-Detection/"/>
+    <id>https://ywj1.github.io/2021/05/27/Transformer-In-Object-Detection/</id>
+    <published>2021-05-27T06:15:04.000Z</published>
+    <updated>2021-06-01T12:39:33.540Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Transformer-in-Object-Detection"><a href="#Transformer-in-Object-Detection" class="headerlink" title="Transformer in Object Detection"></a>Transformer in Object Detection</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Transformer-in-Object-Detection&quot;&gt;&lt;a href=&quot;#Transformer-in-Object-Detection&quot; class=&quot;headerlink&quot; title=&quot;Transformer in Object Detectio</summary>
+      
+    
+    
+    
+    <category term="论文笔记" scheme="https://ywj1.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Object detection" scheme="https://ywj1.github.io/tags/Object-detection/"/>
+    
+    <category term="Transformer" scheme="https://ywj1.github.io/tags/Transformer/"/>
+    
+  </entry>
   
   <entry>
     <title>Trident Network</title>
@@ -62,9 +88,9 @@
     <category term="论文笔记" scheme="https://ywj1.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Feature Fusion" scheme="https://ywj1.github.io/tags/Feature-Fusion/"/>
-    
     <category term="Object detection" scheme="https://ywj1.github.io/tags/Object-detection/"/>
+    
+    <category term="Feature Fusion" scheme="https://ywj1.github.io/tags/Feature-Fusion/"/>
     
   </entry>
   
@@ -323,9 +349,9 @@
     <category term="论文笔记" scheme="https://ywj1.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Feature Fusion" scheme="https://ywj1.github.io/tags/Feature-Fusion/"/>
-    
     <category term="Object detection" scheme="https://ywj1.github.io/tags/Object-detection/"/>
+    
+    <category term="Feature Fusion" scheme="https://ywj1.github.io/tags/Feature-Fusion/"/>
     
   </entry>
   
@@ -349,9 +375,9 @@
     <category term="论文笔记" scheme="https://ywj1.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Feature Fusion" scheme="https://ywj1.github.io/tags/Feature-Fusion/"/>
-    
     <category term="Object detection" scheme="https://ywj1.github.io/tags/Object-detection/"/>
+    
+    <category term="Feature Fusion" scheme="https://ywj1.github.io/tags/Feature-Fusion/"/>
     
   </entry>
   
@@ -489,32 +515,6 @@
     <category term="链表" scheme="https://ywj1.github.io/tags/%E9%93%BE%E8%A1%A8/"/>
     
     <category term="二叉树" scheme="https://ywj1.github.io/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>文献阅读方法</title>
-    <link href="https://ywj1.github.io/2020/09/16/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95/"/>
-    <id>https://ywj1.github.io/2020/09/16/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E6%96%B9%E6%B3%95/</id>
-    <published>2020-09-16T14:02:29.000Z</published>
-    <updated>2020-09-25T11:08:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="文献阅读方法"><a href="#文献阅读方法" class="headerlink" title="文献阅读方法"></a>文献阅读方法</h1><h4 id="阅读初期"><a href="#阅读初期" class="headerlink" title="阅读初期"></a>阅读初期</h4><ol><li><p><strong>收集关注主题的资源(注意文献整理)</strong></p><ul><li>关键词，主题词检索</li><li>检索某个学者</li><li>参考综述检索</li><li>注意文章参考价值</li></ul></li><li><p><strong>按照完成程度构建一个表格</strong></p></li><li><strong>结构性笔记：用自己的语言总结论文的关键发现，结果和技术</strong></li></ol><h4 id="如何阅读"><a href="#如何阅读" class="headerlink" title="如何阅读"></a>如何阅读</h4><ol><li>第一遍从title，abstract和figures开始阅读</li><li>第二遍阅读introduction，conclusion过一遍figures</li><li>阅读整个论文整个部分，跳过不熟悉的</li></ol><h4 id="阅读后"><a href="#阅读后" class="headerlink" title="阅读后"></a>阅读后</h4><p>必须问自己问题：</p><ol><li>作者目的是什么，实现了什么</li><li>引入了什么新型的方法，新方法的要素是什么</li><li>论文中什么对我比较重要</li><li>有什么参考文献需要跟踪</li></ol><h3 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h3><p><strong>提高阅读效率</strong></p><ul><li>集中时间看文献</li><li>做好记录和标记</li><li>注重如何阅读</li></ul><p>阅读文献时候，要总结常用句型和常用短语（以英文为母语者）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;文献阅读方法&quot;&gt;&lt;a href=&quot;#文献阅读方法&quot; class=&quot;headerlink&quot; title=&quot;文献阅读方法&quot;&gt;&lt;/a&gt;文献阅读方法&lt;/h1&gt;&lt;h4 id=&quot;阅读初期&quot;&gt;&lt;a href=&quot;#阅读初期&quot; class=&quot;headerlink&quot; title=&quot;阅</summary>
-      
-    
-    
-    
-    <category term="Method" scheme="https://ywj1.github.io/categories/Method/"/>
-    
-    
-    <category term="Method" scheme="https://ywj1.github.io/tags/Method/"/>
-    
-    <category term="文献阅读" scheme="https://ywj1.github.io/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/"/>
     
   </entry>
   

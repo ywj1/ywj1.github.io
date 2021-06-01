@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Transformer In Object Detection</title>
+      <link href="2021/05/27/Transformer-In-Object-Detection/"/>
+      <url>2021/05/27/Transformer-In-Object-Detection/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Transformer-in-Object-Detection"><a href="#Transformer-in-Object-Detection" class="headerlink" title="Transformer in Object Detection"></a>Transformer in Object Detection</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Object detection </tag>
+            
+            <tag> Transformer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Trident Network</title>
       <link href="2020/10/26/Trident-Network/"/>
       <url>2020/10/26/Trident-Network/</url>
@@ -47,9 +74,9 @@
       
         <tags>
             
-            <tag> Feature Fusion </tag>
-            
             <tag> Object detection </tag>
+            
+            <tag> Feature Fusion </tag>
             
         </tags>
       
@@ -320,9 +347,9 @@
       
         <tags>
             
-            <tag> Feature Fusion </tag>
-            
             <tag> Object detection </tag>
+            
+            <tag> Feature Fusion </tag>
             
         </tags>
       
@@ -347,9 +374,9 @@
       
         <tags>
             
-            <tag> Feature Fusion </tag>
-            
             <tag> Object detection </tag>
+            
+            <tag> Feature Fusion </tag>
             
         </tags>
       
