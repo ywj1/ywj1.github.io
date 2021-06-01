@@ -284,13 +284,6 @@
 
   
   <url>
-    <loc>https://ywj1.github.io/tags/C/</loc>
-    <lastmod>2021-06-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ywj1.github.io/tags/Object-detection/</loc>
     <lastmod>2021-06-01</lastmod>
     <changefreq>daily</changefreq>
@@ -299,6 +292,13 @@
   
   <url>
     <loc>https://ywj1.github.io/tags/Feature-Fusion/</loc>
+    <lastmod>2021-06-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ywj1.github.io/tags/C/</loc>
     <lastmod>2021-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -389,20 +389,6 @@
   </url>
   
   <url>
-    <loc>https://ywj1.github.io/tags/python/</loc>
-    <lastmod>2021-06-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ywj1.github.io/tags/%E7%AC%94%E8%AF%95/</loc>
-    <lastmod>2021-06-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ywj1.github.io/tags/Method/</loc>
     <lastmod>2021-06-01</lastmod>
     <changefreq>daily</changefreq>
@@ -411,6 +397,13 @@
   
   <url>
     <loc>https://ywj1.github.io/tags/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB/</loc>
+    <lastmod>2021-06-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ywj1.github.io/tags/python/</loc>
     <lastmod>2021-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -432,6 +425,13 @@
   
   <url>
     <loc>https://ywj1.github.io/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-06-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ywj1.github.io/tags/%E7%AC%94%E8%AF%95/</loc>
     <lastmod>2021-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -489,14 +489,14 @@
 
   
   <url>
-    <loc>https://ywj1.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://ywj1.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://ywj1.github.io/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://ywj1.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2021-06-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
