@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Summary of Transformer used in CV</title>
+      <link href="2021/06/02/Summary-of-Transformer-in-CV/"/>
+      <url>2021/06/02/Summary-of-Transformer-in-CV/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Transformer In Object Detection</title>
       <link href="2021/05/27/Transformer-In-Object-Detection/"/>
       <url>2021/05/27/Transformer-In-Object-Detection/</url>
@@ -74,9 +87,9 @@
       
         <tags>
             
-            <tag> Feature Fusion </tag>
-            
             <tag> Object detection </tag>
+            
+            <tag> Feature Fusion </tag>
             
         </tags>
       
@@ -347,9 +360,9 @@
       
         <tags>
             
-            <tag> Feature Fusion </tag>
-            
             <tag> Object detection </tag>
+            
+            <tag> Feature Fusion </tag>
             
         </tags>
       
@@ -374,9 +387,9 @@
       
         <tags>
             
-            <tag> Feature Fusion </tag>
-            
             <tag> Object detection </tag>
+            
+            <tag> Feature Fusion </tag>
             
         </tags>
       
