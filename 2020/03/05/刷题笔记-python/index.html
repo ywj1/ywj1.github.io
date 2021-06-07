@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -484,47 +485,47 @@
                 <p><strong>Python</strong></p>
 <ol>
 <li><p>将一个int类型的数据逐个放入list中</p>
-<pre class=" language-lang-python"><code class="language-lang-python">list(map(str,str(num)))
-</code></pre>
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">list(map(str,str(num)))
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>将list逐个输出转化成字符串</p>
-<pre class=" language-lang-python"><code class="language-lang-python">''.join(list)
-</code></pre>
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">''.join(list)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>转化二进制，八进制，十六进制</p>
-<pre class=" language-lang-python"><code class="language-lang-python">bin(dec)/oct(dec)/hex(dec)
-</code></pre>
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">bin(dec)/oct(dec)/hex(dec)
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>多行输入输出—牛客网</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 for line in sys.stdin:
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>在list中去除空字符或者none</p>
-<pre class=" language-lang-python"><code class="language-lang-python">string = list(filter(None, string))
-</code></pre>
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">string = list(filter(None, string))
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ol>
 <ol>
 <li><p>切片</p>
-<pre class=" language-lang-python"><code class="language-lang-python">list[:-1]//读取到最后一位数
-</code></pre>
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">list[:-1]//读取到最后一位数
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 </ol>
 <ol>
 <li><p>转化成ACSII码</p>
-<pre class=" language-lang-python"><code class="language-lang-python">ord(c)#转化成ASCII码
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">ord(c)#转化成ASCII码
 chr(c)#转化成字符
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li><p>find函数</p>
-<pre class=" language-lang-python"><code class="language-lang-python">a.find(str,beg,end)#找到返回下标，如果没有找到返回-1
-</code></pre>
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">a.find(str,beg,end)#找到返回下标，如果没有找到返回-1
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 </li>
 <li><p>大小写转化</p>
-<pre class=" language-lang-python"><code class="language-lang-python">str.lower()#转化成小写
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">str.lower()#转化成小写
 str.upper()#转化成大写
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 <li></li>
 </ol>
@@ -869,7 +870,7 @@ str.upper()#转化成大写
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -884,6 +885,13 @@ str.upper()#转化成大写
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -486,7 +487,7 @@
 <p>他是这么变换的，大家都知道手机上的字母： 1—1， abc—2, def—3, ghi—4, jkl—5, mno—6, pqrs—7, tuv—8 wxyz—9, 0—0,就这么简单，渊子把密码中出现的小写字母都变成对应的数字，数字和其他的符号都不做变换，</p>
 <p>声明：密码中没有空格，而密码中出现的大写字母则变成小写之后往后移一位，如：X，先变成小写，再往后移一位，不就是y了嘛，简单吧。记住，z往后移是a哦。</p>
 <hr>
-<h3 id="解法与思路"><a href="#解法与思路" class="headerlink" title="解法与思路"></a>解法与思路</h3><pre class=" language-lang-python"><code class="language-lang-python">import sys
+<h3 id="解法与思路"><a href="#解法与思路" class="headerlink" title="解法与思路"></a>解法与思路</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 import re
 upper_digit = &#123;2:'abc',3:'def',4:'ghi',5:'jkl',6:'mno',7:'pqrs',8:'tuv',9:'wxyz'&#125;
 try:
@@ -513,7 +514,7 @@ try:
         print(output)
 except:
     pass
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>转化成列表，然后再去处理每个单词</p>
 <hr>
 <h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>有这样一道智力题：“某商店规定：三个空汽水瓶可以换一瓶汽水。小张手上有十个空汽水瓶，她最多可以换多少瓶汽水喝？”答案是5瓶，方法如下：先用9个空瓶子换3瓶汽水，喝掉3瓶满的，喝完以后4个空瓶子，用3个再换一瓶，喝掉这瓶满的，这时候剩2个空瓶子。然后你让老板先借给你一瓶汽水，喝掉这瓶满的，喝完以后用3个空瓶子换一瓶满的还给老板。如果小张手上有n个空汽水瓶，最多可以换多少瓶汽水喝？</p>
@@ -521,7 +522,7 @@ except:
 <p><strong>解法与思路</strong></p>
 <p>喝掉的 = 空瓶//3，那么空瓶数 = 喝掉的+剩下的。</p>
 <p>注:剩下俩个空瓶时候，可以去借一个，然后就可以再喝一瓶</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 
 def water(x):
     drink = 0
@@ -543,11 +544,11 @@ try:
         print(w)
 except:
     pass
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>实现删除字符串中出现次数最少的字符，若多个字符出现次数一样，则都删除。输出删除这些单词后的字符串，字符串中其它字符保持原来的顺序。</p>
 <p>注意每个输入文件有多组输入，即多个字符串用回车隔开</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 
 try:
     while True:
@@ -579,7 +580,7 @@ try:
         print(''.join(line))
 except:
     pass
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>根据题目理解，我觉得不是小写字母应该删除。</p>
 <p>删除的方法，就是将要删除的字符放入list，然后使用遍历的方式进行删除。</p>
 <hr>
@@ -590,7 +591,7 @@ except:
 <p>如，输入： BabA 输出： aABb</p>
 <p>规则 3 ：非英文字母的其它字符保持原来的位置。</p>
 <p>如，输入： By?e 输出： Be?y</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class=" language-lang-python"><code class="language-lang-python">import sys
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 import re
 
 try:
@@ -614,7 +615,7 @@ try:
         print(''.join(error_str))
 except:
     pass
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>设置一个同样长度的0列表，然后将排序的数据放入其中</p>
 <p>sort(key=)这个是排序的规则，用什么方法排序</p>
 
@@ -954,7 +955,7 @@ except:
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -969,6 +970,13 @@ except:
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

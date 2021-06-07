@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -434,12 +435,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Object-detection/">
-                                <span class="chip bg-color">Object detection</span>
-                            </a>
-                        
                             <a href="/tags/Feature-Fusion/">
                                 <span class="chip bg-color">Feature Fusion</span>
+                            </a>
+                        
+                            <a href="/tags/Object-detection/">
+                                <span class="chip bg-color">Object detection</span>
                             </a>
                         
                     </div>
@@ -520,7 +521,7 @@
 <p>高层的feature map经过upsampling和横向的bottom-up的feature map进行element-wise的相加。</p>
 <p>并且为了减少上采样的混叠效果(reduce the aliasing effect of upsampling)，对于每个merged map使用一个$3\times 3$卷积来进行处理。</p>
 <p>下面使tensorflow实现：</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import  tensorflow as tf
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import  tensorflow as tf
 from    tensorflow.keras import layers
 
 class FPN(tf.keras.Model):
@@ -602,7 +603,7 @@ class FPN(tf.keras.Model):
                 tf.TensorShape(C4_shape),
                 tf.TensorShape(C5_shape),
                 tf.TensorShape(C6_shape)]
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -667,12 +668,12 @@ class FPN(tf.keras.Model):
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Object-detection/">
-                                    <span class="chip bg-color">Object detection</span>
-                                </a>
-                            
                                 <a href="/tags/Feature-Fusion/">
                                     <span class="chip bg-color">Feature Fusion</span>
+                                </a>
+                            
+                                <a href="/tags/Object-detection/">
+                                    <span class="chip bg-color">Object detection</span>
                                 </a>
                             
                         </div>
@@ -882,12 +883,12 @@ class FPN(tf.keras.Model):
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Object-detection/">
-                        <span class="chip bg-color">Object detection</span>
-                    </a>
-                    
                     <a href="/tags/Feature-Fusion/">
                         <span class="chip bg-color">Feature Fusion</span>
+                    </a>
+                    
+                    <a href="/tags/Object-detection/">
+                        <span class="chip bg-color">Object detection</span>
                     </a>
                     
                 </div>
@@ -956,7 +957,7 @@ class FPN(tf.keras.Model):
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -971,6 +972,13 @@ class FPN(tf.keras.Model):
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -506,7 +507,7 @@
 <p>构造一个字典，存放各个方向的单位向量</p>
 <p>构造一个list，存放数字的字符形式</p>
 <p>之后就是对输入的字符每个进行判断，并移动</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 #输入的按照;分隔，放入list中
 for line in sys.stdin:
     string  = line.split(";")
@@ -529,7 +530,7 @@ for line in sys.stdin:
                 place = list(map(lambda x, y: x + y, place, move))
 
     print(str(place[0])+','+str(place[1]))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>注意</strong> 多行输入输出:使用sys.stdin</p>
 <hr>
 <h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>请解析IP地址和对应的掩码，进行分类识别。要求按照A/B/C/D/E类地址归类，不合法的地址和掩码单独归类。</p>
@@ -553,7 +554,7 @@ for line in sys.stdin:
 </code></pre><hr>
 <h3 id="解法与思路-1"><a href="#解法与思路-1" class="headerlink" title="解法与思路"></a>解法与思路</h3><p>设置俩个函数用于检测IP与子网掩码</p>
 <p>然后就直接判断IP属于哪一类</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 A = 0
 B = 0
 C = 0
@@ -623,7 +624,7 @@ while True:
             privateIP +=1
 
 print('&#123;&#125; &#123;&#125; &#123;&#125; &#123;&#125; &#123;&#125; &#123;&#125; &#123;&#125;'.format(A,B,C,D,E,noneIP,privateIP))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>开发一个简单错误记录功能小模块，能够记录出错的代码所在的文件名称和行号。</p>
 <p>处理：</p>
@@ -640,7 +641,7 @@ print('&#123;&#125; &#123;&#125; &#123;&#125; &#123;&#125; &#123;&#125; &#123;&#
 <p>比较麻烦的是上面那个不重复记录错误。</p>
 <p>我的思路是：设置一个list，存放输入的数据，文件名，行数，和错误数据</p>
 <p>那么加一就很好办了，用输入的重复数据与list中的存放数据比较，然后错误数据加一。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 lines = []
 errors = []
 try:
@@ -674,7 +675,7 @@ if len(errors)>8:
 else:
     for i in range(len(errors)):
         print("&#123;&#125; &#123;&#125; &#123;&#125;".format(errors[i][1],errors[i][2],errors[i][3]))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>与牛客网的数据匹配度是30%，他的答案应该有问题，我发现他的数据重复是按照最后文件名来操作的，不带上前面的路径，我觉得应该需要带上路径。</p>
 
                 
@@ -1021,7 +1022,7 @@ else:
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -1036,6 +1037,13 @@ else:
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

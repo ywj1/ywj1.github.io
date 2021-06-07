@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -529,7 +530,7 @@
 <li>实力分割：区分每一个像素所属的物体。（进一步的语义分割）</li>
 </ul>
 <h3 id="数据集初步提取"><a href="#数据集初步提取" class="headerlink" title="数据集初步提取"></a>数据集初步提取</h3><p>首先使用read_voc_images提取图片的vector形式</p>
-<pre class=" language-lang-python"><code class="language-lang-python">def read_voc_images(root="data/VOCdevkit/VOC2012", is_train = True, max_num = None):
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">def read_voc_images(root="data/VOCdevkit/VOC2012", is_train = True, max_num = None):
     txt_fname = '%s/ImageSets/Segmentation/%s' %(root, 'train.txt' if is_train else 'val.txt')
     with open(txt_fname, 'r') as f:
         images = f.read().split()
@@ -544,9 +545,9 @@
         label_tmp = tf.io.read_file('%s/SegmentationClass/%s.png' % (root, fname))
         labels[i] = tf.image.decode_png(label_tmp)
     return features, labels #shape=(h, w, c)
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>使用show_images来展示相对应的Semantic Segmentation</p>
-<pre class=" language-lang-python"><code class="language-lang-python">def show_images(imgs, num_rows, num_cols, scale = 2):
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">def show_images(imgs, num_rows, num_cols, scale = 2):
     figsize = (num_cols * scale, num_rows * scale)
     _, axes = plt.subplots(num_rows, num_cols, figsize = figsize)
     for i in range(num_rows):
@@ -555,9 +556,9 @@
             axes[i][j].axes.get_xaxis().set_visible(False)
             axes[i][j].axes.get_yaxis().set_visible(False)
     return axes
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>像素点的颜色对应于不同的种类</p>
-<pre class=" language-lang-python"><code class="language-lang-python">VOC_COLORMAP = [[0, 0, 0], [128, 0, 0], [0, 128, 0], [128, 128, 0],
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">VOC_COLORMAP = [[0, 0, 0], [128, 0, 0], [0, 128, 0], [128, 128, 0],
                 [0, 0, 128], [128, 0, 128], [0, 128, 128], [128, 128, 128],
                 [64, 0, 0], [192, 0, 0], [64, 128, 0], [192, 128, 0],
                 [64, 0, 128], [192, 0, 128], [64, 128, 128], [192, 128, 128],
@@ -586,9 +587,9 @@ def voc_label_indices(colormap, colormap2label):
     idx = tf.add(idx, colormap[:, :, 2])
 
     return tf.gather_nd(colormap2label, tf.expand_dims(idx, -1))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>对图片进行裁剪</p>
-<pre class=" language-lang-python"><code class="language-lang-python">def voc_rand_crop(feature, label, height, width):
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">def voc_rand_crop(feature, label, height, width):
     '''
     Random crop feature (tf image) and label(tf.image)
     先将channel合并，裁剪之后再分开
@@ -599,7 +600,7 @@ def voc_label_indices(colormap, colormap2label):
     combined_crop = tf.image.random_crop(combined,
                         size=tf.concat([(height, width), [last_label_dim + last_feature_dim]],axis=0))
     return combined_crop[:, :, :last_feature_dim], combined_crop[:, :, last_feature_dim:]
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -961,7 +962,7 @@ def voc_label_indices(colormap, colormap2label):
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -976,6 +977,13 @@ def voc_label_indices(colormap, colormap2label):
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

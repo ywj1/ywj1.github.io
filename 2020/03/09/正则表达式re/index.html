@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -495,14 +496,14 @@
 <p>re.search(pattern,string,flag=0)</p>
 <p>pattern：正则中的模式字符串，string：被查找替换的原始字符串</p>
 <p>flags：标志位，用于控制正则表达式的匹配方式。可以检测string的任何位置</p>
-<pre class=" language-lang-python"><code class="language-lang-python">re.search('[0-9]','sdfs9300')
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">re.search('[0-9]','sdfs9300')
 #就会找到其中的字符
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>re.match(pattern,string,flag=0)</p>
 <p>只能从字符串的开头找起</p>
-<pre class=" language-lang-python"><code class="language-lang-python">re.match('com','complier sfsf sf')
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">re.match('com','complier sfsf sf')
 #就会返回None
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="机试题目"><a href="#机试题目" class="headerlink" title="机试题目"></a>机试题目</h3><h4 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h4><p>密码要求:</p>
 <p>1.长度超过8位</p>
@@ -511,7 +512,7 @@
 <p>说明:长度超过2的子串</p>
 <hr>
 <p><strong>代码</strong></p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 import re
 try:
     while True:
@@ -537,7 +538,7 @@ try:
             print("NG")
             continue
         print("OK")
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>r’.*(…).*\1’表示前面有任意数，(…)表示三个任意数,\1表示重复上面引用分组。</p>
 
                 
@@ -876,7 +877,7 @@ try:
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -891,6 +892,13 @@ try:
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

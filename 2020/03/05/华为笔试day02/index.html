@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -484,7 +485,7 @@
                 <h1 id="牛客——华为机试题"><a href="#牛客——华为机试题" class="headerlink" title="牛客——华为机试题"></a>牛客——华为机试题</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>编写一个函数，计算字符串中含有的不同字符的个数。字符在ACSII码范围内(0~127)，换行表示结束符，不算在字符里。不在范围内的不作统计。</p>
 <h3 id="思路与解法"><a href="#思路与解法" class="headerlink" title="思路与解法"></a>思路与解法</h3><p><strong>思路</strong></p>
 <p>首先将重复的数据剔除，然后判断剩余的字符是否在ASCII范围内。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">num = input()
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">num = input()
 ch = ""
 count = 0
 for i in range(len(num)):
@@ -494,45 +495,45 @@ for i in range(len(ch)):
     if(ord(ch[i])>0 and ord(ch[i])<127):
         count +=1
 print(count)
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>或者使用set这样更加简洁</p>
-<pre class=" language-lang-python"><code class="language-lang-python">print(len(set([i for i in input() if ord(i) in range(128)])))
-</code></pre>
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">print(len(set([i for i in input() if ord(i) in range(128)])))
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <hr>
 <h3 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h3><p>输入一个整数，将这个整数以字符串的形式逆序输出</p>
 <p>程序不考虑负数的情况，若数字含有0，则逆序形式也含有0，如输入为100，则输出为001</p>
 <h3 id="思路与解法-1"><a href="#思路与解法-1" class="headerlink" title="思路与解法"></a>思路与解法</h3><p><strong>思路</strong></p>
 <p>将输入的整数逐个放入list中，然后list转置，之后逐个输出。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">num = eval(input())
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">num = eval(input())
 a = list(map(str,str(num)))
 a.reverse()
 print(int(''.join(a)))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h3><p>写出一个程序，接受一个字符串，然后输出该字符串反转后的字符串。（字符串长度不超过1000）</p>
 <h3 id="思路与解法-2"><a href="#思路与解法-2" class="headerlink" title="思路与解法"></a>思路与解法</h3><p><strong>思路</strong></p>
 <p>将字符串放入list，之后转置，并逐个输出list</p>
-<pre class=" language-lang-python"><code class="language-lang-python">string = input()
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">string = input()
 a = list(map(str,string))
 a.reverse()
 print(''.join(a))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h3><p>将一个英文语句以单词为单位逆序排放。例如“I am a boy”，逆序排放后为“boy a am I”<br>所有单词之间用一个空格隔开，语句中除了英文字母外，不再包含其他字符</p>
 <p>接口说明</p>
 <p>/<em>*<br> \</em> 反转句子<br> *<br> * @param sentence 原句子<br> * @return 反转后的句子<br> */<br>public String reverse(String sentence);</p>
 <h3 id="思路与解法-3"><a href="#思路与解法-3" class="headerlink" title="思路与解法"></a>思路与解法</h3><p><strong>思路</strong></p>
 <p>以空格分隔，放入list中，然后转置。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">string = input()
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">string = input()
 a = string.split()
 a.reverse()
 print(' '.join(a))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="题目描述-4"><a href="#题目描述-4" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定n个字符串，请对n个字符串按照字典序排列。</p>
 <h3 id="思路与解法-4"><a href="#思路与解法-4" class="headerlink" title="思路与解法"></a>思路与解法</h3><p><strong>思路</strong></p>
 <p>将字符串放入list中，然后进行排序，之后逐个输出</p>
-<pre class=" language-lang-python"><code class="language-lang-python">num = eval(input())
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">num = eval(input())
 a = []
 for i in range(num):
     b = input()
@@ -541,26 +542,26 @@ for i in range(num):
 a = sorted(a)
 for i in range(len(a)):
     print(a[i])
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="题目描述-5"><a href="#题目描述-5" class="headerlink" title="题目描述"></a>题目描述</h3><p>给定n个字符串，请对n个字符串按照字典序排列。</p>
 <h3 id="思路与解法-5"><a href="#思路与解法-5" class="headerlink" title="思路与解法"></a>思路与解法</h3><p><strong>思路</strong></p>
 <ol>
 <li><p>使用python的库，将10进制的数转化成2进制，之后使用count函数统计1的个数</p>
-<pre class=" language-lang-python"><code class="language-lang-python">num = eval(input())
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">num = eval(input())
 num = bin(num)
 print(num.count("1"))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>10进制的数除以2，余数为1，那么就有存在1，然后逐一进行</p>
-<pre class=" language-lang-python"><code class="language-lang-python">def change(x):
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">def change(x):
     count = 0
     while x>0:
         if x%2 == 1:
             count +=1
         x = x//2
     return count
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 </ol>
 
@@ -896,7 +897,7 @@ print(num.count("1"))
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -911,6 +912,13 @@ print(num.count("1"))
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

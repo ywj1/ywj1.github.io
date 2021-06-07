@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -484,7 +485,7 @@
                 <h1 id="牛客——华为机试题"><a href="#牛客——华为机试题" class="headerlink" title="牛客——华为机试题"></a>牛客——华为机试题</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于5,向上取整；小于5，则向下取整。</p>
 <span id="more"></span>
 <h4 id="解法与思路"><a href="#解法与思路" class="headerlink" title="解法与思路"></a>解法与思路</h4><p>判断后面小数是否大于0.5如果大于0.5那么进位，否则不进位</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import math
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import math
 
 num = eval(input())
 small = num - math.floor(num)
@@ -495,7 +496,7 @@ else:
     jinwei = 0
 num = math.floor(num)+jinwei
 print(num)
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -829,7 +830,7 @@ print(num)
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -844,6 +845,13 @@ print(num)
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

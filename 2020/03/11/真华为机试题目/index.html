@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -486,7 +487,7 @@
 <p>例如：</p>
 <p>4<br>xxx=/lyf/${ttt}/test<br>ttt=www<br>yyy=seeyou<br>aa=/aa/${xxx}/bbb/${yyy}/ccc</p>
 <hr>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 import math
 
 for line in sys.stdin:
@@ -512,13 +513,13 @@ for line in sys.stdin:
     last_dis = math.sqrt((start[0]*start[0])+(start[1]*start[1]))
     dis += last_dis
     print(math.floor(dis))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>通过率百分之75，错误的地方我还没想到。</p>
 <hr>
 <h3 id="题目二"><a href="#题目二" class="headerlink" title="题目二"></a>题目二</h3><p>有一只小蜜蜂从蜂巢去五片花田采蜜，采完回家，假设以蜂巢为坐标原点(0,0)，花田位置为A(50,0)、B(50,5)、C(50,20)、D(50,30)、E(50,50)，规划小蜜蜂采蜜路线，求解蜜蜂飞行最短距离（输出为整数）</p>
 <p>输入</p>
 <p>50 0 50 5 50 20 50 30 50 50</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 import math
 
 for line in sys.stdin:
@@ -544,7 +545,7 @@ for line in sys.stdin:
     last_dis = math.sqrt((start[0]*start[0])+(start[1]*start[1]))
     dis += last_dis
     print(math.floor(dis))
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>通过率55.56%</p>
 <p>应该使用Dijkstra算法去求取才对。</p>
 <hr>
@@ -892,7 +893,7 @@ for line in sys.stdin:
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -907,6 +908,13 @@ for line in sys.stdin:
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

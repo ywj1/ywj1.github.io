@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -531,7 +532,7 @@
 <p><strong>思路与算法</strong></p>
 <p>算法：就是下面这个</p>
 <p><img src="/2020/03/05/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98/Blog\knapsack1.jpg" alt="image-20200305185212960"></p>
-<pre class=" language-lang-C++"><code class="language-lang-C++">#include <iostream>
+<pre class="line-numbers language-lang-C++"><code class="language-lang-C++">#include <iostream>
 
 using namespace std;
 
@@ -565,7 +566,7 @@ int main()&#123;
     knapsack();
     cout<<B[5][20]<<endl;
 &#125;
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h2 id="华为机试题"><a href="#华为机试题" class="headerlink" title="华为机试题"></a>华为机试题</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>王强今天很开心，公司发给N元的年终奖。王强决定把年终奖用于购物，他把想买的物品分为两类：主件与附件，附件是从属于某个主件的，下表就是一些主件与附件的例子：</p>
 <div class="table-container">
@@ -601,7 +602,7 @@ int main()&#123;
 <p>v[j 1 ]<em>w[j 1 ]+v[j 2 ]</em>w[j 2 ]+ … +v[j k ]<em>w[j k ] 。（其中 </em> 为乘号）</p>
 <p>  请你帮助王强设计一个满足要求的购物单。</p>
 <h3 id="算法与思路"><a href="#算法与思路" class="headerlink" title="算法与思路"></a>算法与思路</h3><p>将附件属性独立放入一个list，然后判断list值是否等于0，来进行讨论，如果不是0，那么就要附件加上主件一起来进行判断，最后用背包问题的一般解法就好。</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import numpy as np
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import numpy as np
 price, num = map(int,input().split())
 D = np.zeros([num+1,price+1])
 P = [0]
@@ -630,7 +631,7 @@ def knapsack():
 
 knapsack()
 print(D[num][price])
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>PS:这个代码过不了牛客网所有的例子，说明思路还是有点问题。</p>
 
                 
@@ -969,7 +970,7 @@ print(D[num][price])
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -984,6 +985,13 @@ print(D[num][price])
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

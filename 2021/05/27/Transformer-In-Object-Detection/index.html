@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -494,7 +495,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Transformer-in-Object-Detection"><a href="#Transformer-in-Object-Detection" class="headerlink" title="Transformer in Object Detection"></a>Transformer in Object Detection</h1><p>Transformer在NLP中应用很广泛，但是在CV中确实十分少见，究其原因，主要是因为CV中使用的是图像，都是2维的数据，而NLP中是以1维数据为主。因此在ViT之前，CV领域主要是将其思想，self-Attention借用在CNN网络中，即提出了通道注意力等各种各样的注意力（代表性网络是：[SeNet][<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1709.01507]等）。随着ViT的出现，Transformer在CV领域如喷泉搬涌出，Transformer在CV中的应用越来越多。这次主要介绍Transformer在目标检测（Object">https://arxiv.org/abs/1709.01507]等）。随着ViT的出现，Transformer在CV领域如喷泉搬涌出，Transformer在CV中的应用越来越多。这次主要介绍Transformer在目标检测（Object</a> Detection）中的应用。主要分为三个部分，首先介绍最基础的<a href="&quot;Transformer&quot;">Transfomer</a>，随后介绍<a href="&quot;DETR&quot;">DETR</a>，最后在DETR中改进的<a href="&quot;Deformable DETR&quot;">Deformable DETR</a>。</p>
+                <h1 id="Transformer-in-Object-Detection"><a href="#Transformer-in-Object-Detection" class="headerlink" title="Transformer in Object Detection"></a>Transformer in Object Detection</h1><p>Transformer在NLP中应用很广泛，但是在CV中确实十分少见，究其原因，主要是因为CV中使用的是图像，都是2维的数据，而NLP中是以1维数据为主。因此在ViT之前，CV领域主要是将其思想，self-Attention借用在CNN网络中，即提出了通道注意力等各种各样的注意力代表性网络是：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1709.01507">SeNet</a>等。随着ViT的出现，Transformer在CV领域如喷泉搬涌出，Transformer在CV中的应用越来越多。这次主要介绍Transformer在目标检测（Object Detection）中的应用。主要分为三个部分，首先介绍最基础的<a href="&quot;Transformer&quot;">Transfomer</a>，随后介绍<a href="&quot;DETR&quot;">DETR</a>，最后在DETR中改进的<a href="&quot;Deformable DETR&quot;">Deformable DETR</a>。</p>
 <h2 id="Transformer"><a href="#Transformer" class="headerlink" title="Transformer"></a>Transformer</h2><p>Transformer结构首先在<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1706.03762.pdf">Attention is All You Need</a>中提出，文中主要提出了Transformer模型，构建里序列模型的全局关系，不像RNN一样，需要一个个进行预测，而是可以实现并行化运行。对于直接从事或者学习CV方向的来说，首先我们了解一下什么叫做Embedding（有过NLP方向可以略过此部分）。</p>
 <h3 id="Embedding"><a href="#Embedding" class="headerlink" title="Embedding"></a>Embedding</h3><p><strong>数学角度</strong>：</p>
 <p>​    Embedding实际上是一个映射（mapping），<code>f:x-&gt;y</code>，其中f是一个函数，实现x到y的映射，并且f具有俩个特征：injective（单射性：不同的x映射到不同的y）2.structure-preserving（结构保存，或者说特征保存：如果<code>x1&gt;x2</code>通过f得到的y1,y2满足<code>y1&gt;y2</code>）。因此从数学角度来说，Embedding即找到一个函数，实现<code>x-&gt;y</code>的映射，并且这个函数具有如上所述俩个特征。</p>
@@ -506,21 +507,21 @@
 <li>用于可视化不同离散变量之间的关系（这里有一个很好玩的网络，可以用于可视化Embedding，是Tensorflow开发的<a target="_blank" rel="noopener" href="https://projector.tensorflow.org/">projector</a>，是一个在线应用程序）</li>
 </ol>
 <p><strong>One-Hot Encoding与Embedding之间的对比</strong>：<br>例如在NLP学习中，有如下的几组词，首先通过One-hot encoding：</p>
-<pre class=" language-lang-C++"><code class="language-lang-C++">words = ['I', 'have', 'an', 'apple']
+<pre class="line-numbers language-lang-C++"><code class="language-lang-C++">words = ['I', 'have', 'an', 'apple']
 One_hot_words = [[1, 0, 0, 0],
                 [0, 1, 0, 0],
                 [0, 0, 1, 0],
                 [0, 0, 0, 1]]
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>从上述的One-hot encoding可以看出每个变量是没有关系的，并且随着words的数量越来越多，One-hot向量的维数也会越来越大，这显然不是我们所希望的。</p>
 <p>因此提出了Embedding，通过压缩向量的维数，使用Embedding neural network和supervised learning（即简易的神经网络）来进行学习，来找到最适合的表述以及挖掘内在联系。如下面的例子（PS：随便举的）</p>
-<pre class=" language-lang-python"><code class="language-lang-python">words = ['I', 'have', 'an', 'apple']
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">words = ['I', 'have', 'an', 'apple']
 Embedding = [[0.84, 0.48],
             [0.32, 0.57],
             [0.23, -0.43],
             [-0.87, -0.94]]
 //通过计算向量的内积，可以得出不同单词之间的相关度。
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>引用：</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526">https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526</a></li>
@@ -835,7 +836,7 @@ head_i=Attetnion(Q_i,K_i,V_i)</script><p>对于MultiHead的理解，可以是：
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/02/Summary-of-Transformer-in-CV/">
+                <a href="/2021/06/01/Summary-of-Transformer-in-CV/">
                     <div class="card-image">
                         
                         
@@ -847,20 +848,32 @@ head_i=Attetnion(Q_i,K_i,V_i)</script><p>对于MultiHead的理解，可以是：
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            本文主要简要介绍自ViT后，关于Transformer在CV领域中的创新网络结构。
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            EscLife
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    论文笔记
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Transformer/">
+                        <span class="chip bg-color">Transformer</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -927,7 +940,7 @@ head_i=Attetnion(Q_i,K_i,V_i)</script><p>对于MultiHead的理解，可以是：
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -942,6 +955,13 @@ head_i=Attetnion(Q_i,K_i,V_i)</script><p>对于MultiHead的理解，可以是：
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

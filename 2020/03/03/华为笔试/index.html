@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -494,7 +495,7 @@
 <hr>
 <h3 id="解法与思路"><a href="#解法与思路" class="headerlink" title="解法与思路"></a>解法与思路</h3><h5 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h5><p>对于一个数只要遍历根号X就可以找出他所有的因数，并且对于质数只要反复遍历，那么下一次遍历的也将会是质数(因为不是质数的话，就会遍历之前小的质数)</p>
 <p><strong>Python</strong></p>
-<pre class=" language-lang-python"><code class="language-lang-python">import math
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import math
 a = int(input())
 res = []
 for i in range(2,math.floor(math.sqrt(a))):
@@ -502,9 +503,9 @@ for i in range(2,math.floor(math.sqrt(a))):
         a /= i
         res.append(i)
 print(" ".join(map(str, res)) + " " if res else str(a) + " ")
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>C++</strong></p>
-<pre class=" language-lang-C++"><code class="language-lang-C++">#include<iostream>
+<pre class="line-numbers language-lang-C++"><code class="language-lang-C++">#include<iostream>
 #include<cmath>
 using namespace std;
 
@@ -518,7 +519,7 @@ int main()&#123;
         &#125;
     &#125;
 &#125;
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -854,7 +855,7 @@ int main()&#123;
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -869,6 +870,13 @@ int main()&#123;
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>

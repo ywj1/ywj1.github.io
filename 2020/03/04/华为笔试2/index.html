@@ -30,7 +30,8 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -484,7 +485,7 @@
                 <h1 id="牛客——华为机试题"><a href="#牛客——华为机试题" class="headerlink" title="牛客——华为机试题"></a>牛客——华为机试题</h1><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；<br>长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。</p>
 <span id="more"></span>
 <h3 id="解法与思路"><a href="#解法与思路" class="headerlink" title="解法与思路"></a>解法与思路</h3><p><strong>python</strong></p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 
 def cut(obj,length):
     if len(obj) > length:
@@ -513,10 +514,10 @@ try:
 
 except:
     pass
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这个先设置俩个函数，分别达到切割与加0操作，但是fail，因为跑的时间太长了，不满足。</p>
 <p>看了网上大神的py精简</p>
-<pre class=" language-lang-python"><code class="language-lang-python">import sys
+<pre class="line-numbers language-lang-python"><code class="language-lang-python">import sys
 
 try:
     while True:
@@ -535,7 +536,7 @@ try:
             print(s.ljust(8,"0"))
 except:
     pass
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这俩种思路都是先进行判断是否需要切片，然后补0，但是都由于运行时间过长，而导致不能通过</p>
 <pre><code>str1 = raw_input()
 str2 = raw_input()
@@ -881,7 +882,7 @@ myTrim(str2)
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFunction.js"></script>
 
 <!-- 代码语言 -->
 
@@ -896,6 +897,13 @@ myTrim(str2)
 <!-- 代码块收缩 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
 
 
     </div>
