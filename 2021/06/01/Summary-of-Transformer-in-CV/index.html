@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
+</head>
 
 
 
@@ -469,14 +469,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6
+                    663
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -491,7 +491,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Summary-of-Transformer-Used-in-CV"><a href="#Summary-of-Transformer-Used-in-CV" class="headerlink" title="Summary of Transformer Used in CV"></a>Summary of Transformer Used in CV</h1><h2 id="ViT"><a href="#ViT" class="headerlink" title="ViT"></a>ViT</h2>
+                <h1 id="Summary-of-Transformer-Used-in-CV"><a href="#Summary-of-Transformer-Used-in-CV" class="headerlink" title="Summary of Transformer Used in CV"></a>Summary of Transformer Used in CV</h1><h2 id="ViT"><a href="#ViT" class="headerlink" title="ViT"></a>ViT</h2><h2 id="从图像分割上改进"><a href="#从图像分割上改进" class="headerlink" title="从图像分割上改进"></a>从图像分割上改进</h2><h3 id="DVT-Not-All-Images-are-Worth-16×16-Words-Dynamic-Vision-Transformers-with-Adaptive-Sequence-Length"><a href="#DVT-Not-All-Images-are-Worth-16×16-Words-Dynamic-Vision-Transformers-with-Adaptive-Sequence-Length" class="headerlink" title="DVT(Not All Images are Worth 16×16 Words: Dynamic Vision Transformers with Adaptive Sequence Length)"></a>DVT(Not All Images are Worth 16×16 Words: Dynamic Vision Transformers with Adaptive Sequence Length)</h3><h4 id="Abstract："><a href="#Abstract：" class="headerlink" title="Abstract："></a>Abstract：</h4><p>以ViT为代表的视觉Transformer通常将图片输入表征为固定数目的tokens。该文章认为每个图片有其自己的特点，其token numbers应该根据不同图片特征进行不同的划分。论文将图片从<code>easy-&gt;hard</code>进行划分，其中easy表示的切分的token number数目少，hard则为多。因此根据这个特点，论文提出了<strong>DVT(Dynamic Vision Transformer)</strong>来实现自适应的样本推理（即将样本切割成不同的token numbers）。并且针对模型由于Transformer级联导致的冗余计算，文章设计了<strong>feature reuse</strong>和<strong>relationship reuse</strong>。</p>
+<h4 id="DVT"><a href="#DVT" class="headerlink" title="DVT"></a>DVT</h4><p>文章首先引出问题（很不错的写作思路），首先在T2T-ViT-12中使用不同的Tokens进行实验，发现若将token数目设置为4<em>4，准确率仅仅下降了15.9%，但是计算开销却下降了8.5倍。因此这一结果证明，正确识别占据大多数的较为“easy”的样本只需4\</em>4或者更少的token。</p>
+<p><img src="/2021/06/01/Summary-of-Transformer-in-CV/DVT/T2T-ViT-12.png" alt="T2T-ViT-12"></p>
+<p>因此受到上述现象的启发，论文提出了一个<strong>DVT(Dynamic Vision Transformer)</strong>如下图所示，针对每个样本选择一个合适数目token来进行表征：</p>
+<p><img src="/2021/06/01/Summary-of-Transformer-in-CV/DVT/DVT.png" alt="DVT" style="zoom:75%;"></p>
+<p>论文使用从小到大的token数目训练了一组Transformer模型，他们具有相同的基本结构，但是参数相互独立，以分别适应逐渐增多的token数目。对于任意测试样本，首先将其粗略表征为最小数目的token，输入第一个Transformer，以低计算成本迅速得到初步预测。而后判断预测结果是否可信，若可信，则直接输出当前结果并终止推理；若不可信，则将输入图片表征为更多的token，激活下一个Transformer进行更细粒度、但计算开销更大的的推理，得到结果之后再次判断是否可信，以此类推。论文采用将预测的置信度（confidence）与一个固定阈值进行比较的方式作为准出的判断准则。</p>
+<p><strong>Feature reuse和relationship reuse</strong></p>
+<p>所有的Transformer都是为了提取分类特征，因此更多token数目的transformer被激活之后，一个更高效的做法是在前一步提取的特征中进一步提取而不是从0开始提取，因此论文提出了特征复用机制。将上面Transformer的最后一层提出，经过MLP和上采样，将其作为<strong>上下文嵌入(Context Embedding)</strong>，并且是以Concat方式加入。</p>
+
                 
             </div>
             <hr/>
@@ -728,50 +736,36 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/01/Summary-of-Transformer-in-CV/">
+                <a href="/2021/06/07/Leetcode-21-5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Summary of Transformer used in CV">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Leetcode-21.5">
                         
-                        <span class="card-title">Summary of Transformer used in CV</span>
+                        <span class="card-title">Leetcode-21.5</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文主要简要介绍自ViT后，关于Transformer在CV领域中的创新网络结构。
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-07
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    论文笔记
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            EscLife
                             
                         </span>
                     </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Transformer/">
-                        <span class="chip bg-color">Transformer</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -1040,7 +1034,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.5k</span>
+                        class="white-color">26.4k</span>
             
             
             

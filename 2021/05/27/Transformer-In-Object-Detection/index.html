@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
+</head>
 
 
 
@@ -473,14 +473,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
 
@@ -591,7 +591,14 @@ PE(pos, 2i+1) = cos(\frac{pos}{10000^{\frac{2i}{d_{model}}}}) \\
 MultiHead(Q,K,V)=Concat(head_1,head_2,...,head_n) \\
 head_i=Attetnion(Q_i,K_i,V_i)</script><p>对于MultiHead的理解，可以是：对于一个token不同的子空间（一个head），它的注意力机制是不同的，比如拿词义来说，在head1中，表示的是指代关系，在head2中表示的是主谓宾关系。</p>
 <p><font color="blue">那么在图像中，Multihead表示的对于一个图像切片的token，在不同的子空间对于其他切片token的关系不同，比如拿目标检测来说，在head1中表示，token之间是否存在有存在目标，在head2中表示token之间的关系</font>（理解待商榷）</p>
-<h4 id="Decoder"><a href="#Decoder" class="headerlink" title="Decoder"></a>Decoder</h4><h2 id="DETR"><a href="#DETR" class="headerlink" title="DETR"></a>DETR</h2><h2 id="Deformable-DETR"><a href="#Deformable-DETR" class="headerlink" title="Deformable DETR"></a>Deformable DETR</h2>
+<h4 id="Decoder"><a href="#Decoder" class="headerlink" title="Decoder"></a>Decoder</h4><p>关于Decoder相比于Encoder的区别在于，Decoder中有一个Masked Multi-Head Attention，并且其Multi-Head Attention使用的是cross attention机制，于Ecnoder中的self attention不同，Decoder的V，K来自Encoder的输出，而Q则来自Masked Multi-Head Attention的输出。</p>
+<p><img src="/2021/05/27/Transformer-In-Object-Detection/Decoder.png" alt="image-20210608141458610" style="zoom:75%;"></p>
+<h5 id="Masked-Multi-Head-Attention"><a href="#Masked-Multi-Head-Attention" class="headerlink" title="Masked Multi-Head Attention"></a>Masked Multi-Head Attention</h5><p>由于我们使用的是并行化的训练，因此需要设置mask来将后面的Ground Truth进行遮挡，即让当前的结果不会受到后面Ground Truth的影响。</p>
+<p><img src="/2021/05/27/Transformer-In-Object-Detection/Masked.png" alt="Masked Multi-Head Attention"></p>
+<h5 id="Multi-Head-Attention-1"><a href="#Multi-Head-Attention-1" class="headerlink" title="Multi-Head Attention"></a>Multi-Head Attention</h5><p>将上一步Masked Multi-Head Attention作为Query输入到Multi-Head Attention中，并且其中的Key和Value均来自Encoder的输出。</p>
+<p>我觉得这样设计的目的在于：因为Query作为一个引导信息，它需要找出Key和Value中比较重要的信息，因此Query使用结果作为输入，并且与Key和Value进行匹配，找出有用的信息。</p>
+<h2 id="DETR"><a href="#DETR" class="headerlink" title="DETR"></a>DETR</h2><p>DETR不同于以往的目标检测任务，将</p>
+<h2 id="Deformable-DETR"><a href="#Deformable-DETR" class="headerlink" title="Deformable DETR"></a>Deformable DETR</h2>
                 
             </div>
             <hr/>
@@ -1143,7 +1150,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">25.5k</span>
+                        class="white-color">26.4k</span>
             
             
             
