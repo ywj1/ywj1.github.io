@@ -29,9 +29,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="EscLife. Blog" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 
@@ -469,7 +469,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    663
+                    824
                 </div>
                 
 
@@ -497,8 +497,12 @@
 <p>因此受到上述现象的启发，论文提出了一个<strong>DVT(Dynamic Vision Transformer)</strong>如下图所示，针对每个样本选择一个合适数目token来进行表征：</p>
 <p><img src="/2021/06/01/Summary-of-Transformer-in-CV/DVT/DVT.png" alt="DVT" style="zoom:75%;"></p>
 <p>论文使用从小到大的token数目训练了一组Transformer模型，他们具有相同的基本结构，但是参数相互独立，以分别适应逐渐增多的token数目。对于任意测试样本，首先将其粗略表征为最小数目的token，输入第一个Transformer，以低计算成本迅速得到初步预测。而后判断预测结果是否可信，若可信，则直接输出当前结果并终止推理；若不可信，则将输入图片表征为更多的token，激活下一个Transformer进行更细粒度、但计算开销更大的的推理，得到结果之后再次判断是否可信，以此类推。论文采用将预测的置信度（confidence）与一个固定阈值进行比较的方式作为准出的判断准则。</p>
-<p><strong>Feature reuse和relationship reuse</strong></p>
+<p><strong>Feature reuse</strong></p>
 <p>所有的Transformer都是为了提取分类特征，因此更多token数目的transformer被激活之后，一个更高效的做法是在前一步提取的特征中进一步提取而不是从0开始提取，因此论文提出了特征复用机制。将上面Transformer的最后一层提出，经过MLP和上采样，将其作为<strong>上下文嵌入(Context Embedding)</strong>，并且是以Concat方式加入。</p>
+<p><img src="/2021/06/01/Summary-of-Transformer-in-CV/DVT/Feature-reuse.png" alt="Feature Reuse" style="zoom: 80%;"></p>
+<p><strong>relationship reuse</strong></p>
+<p>Transformer的self-attention模块能够整合图像的全局信息，能够有效的学习到长距离依赖特征。而关系复用指的是后面的Transformer可以使用先前的模型生成的自注意力图。将上游模型的全部注意力图以logits的形式进行整合，经MLP变换和上采样后，加入到下层每个注意力图的logits中。这样，下游模型每一层的attention模块都可灵活复用上游模型不同深度的全部attention信息，且这一复用信息的“强度”可以通过改变MLP的参数自动地调整。</p>
+<p><img src="/2021/06/01/Summary-of-Transformer-in-CV/DVT/Relationship-reuse.png" alt="Relationship Reuse" style="zoom:80%;"></p>
 
                 
             </div>
@@ -1034,7 +1038,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">26.4k</span>
+                        class="white-color">26.5k</span>
             
             
             
